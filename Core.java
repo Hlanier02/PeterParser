@@ -1,6 +1,3 @@
-/**
- * 
- */
 package mainpackage;
 import java.io.*;
 import java.util.*;
@@ -10,36 +7,27 @@ import java.util.*;
  *
  */
 public class Core 
-{// beginning of class
-
-	/**
-	 * @param args
-	 */
-	//Reading file method
+{	// beginning of class
+	{
 	
-
-	output = new ArrayList<String>();
+	ArrayList output = new ArrayList<String>();
 
 	 FileReader something;//This will create the variable used by  method
-		
+	//Since the FileReader method can only accept certain characters 
+	//Scanner is needed to handle the primatives in an efficient manner
+
+	 Scanner input; 
+	 
 	 try {
 		   something = new FileReader("something.txt");  // create the stream
+		   input = new Scanner("something.txt");
 		}
-	catch (FileNotFoundException e1) 
+	catch (FileNotFoundException e) 
 	{
 	   System.out.println("File not Found"); // do something to handle the error -- maybe, end the program
 	}
 
-Scanner input; //Since the FileReader method can only accept certain characters this is needed to handle the primatives in an efficient manner
-	try {
-		
-			input = new Scanner("something.txt");
-		
-		}
-	catch (FileNotFoundException e2) {
-		   System.out.println("File not Found"); // do something to handle the error -- maybe, end the program
-		}
 	
 
-		
+	}		
 }//end of class
